@@ -3,6 +3,14 @@ var input = process.argv[2];
 if (input)
   console.log(reverse(input));
 
+function reverseList(array) {
+  let reversed = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+    reversed.push(array[i]);
+  }
+  return reversed;
+}
+
 function reverse(original) {
-  return orignal.split('').reverseList().join('');
+  return reverseList(original.split('')).join('');
 }
